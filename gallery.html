@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Life in Japan</title>
+    <style>
+        body { font-family: Arial; margin: 0; background-color: #f4f4f4; }
+        nav { background-color: #d90429; padding: 15px; text-align: center; }
+        nav a { color: white; text-decoration: none; padding: 10px 20px; font-weight: bold; }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">ပင်မ</a>
+        <a href="blog.html">Blog</a>
+        <a href="gallery.html">ဓာတ်ပုံများ</a>
+        <a href="guide.html">လမ်းညွှန်</a>
+    </nav>
+    <h1 style="text-align:center;">ဂျပန်နိုင်ငံ မြင်ကွင်းများ</h1>
+    <div class="gallery-container">
+        <div class="gallery-item"><img src="fuji.jpg" alt="Fuji"></div>
+        <div class="gallery-item"><img src="tokyo.jpg" alt="Tokyo"></div>
+        <div class="gallery-item"><img src="osaka.jpg" alt="Osaka"></div>
+    </div>
+</body>
+</html>

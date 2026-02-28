@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life in Japan - Home</title>
+    <style>
+        /* အခြေခံပုံစံ သတ်မှတ်ခြင်း */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* ၁။ Navigation Menu ပုံစံ */
+        nav {
+            background-color: #d90429; /* ဂျပန်အလံအရောင်နဲ့ ဆင်တူတဲ့ အနီရောင် */
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #ef233c;
+            border-radius: 5px;
+        }
+
+        /* ၂။ Header အပိုင်း */
+        header {
+            background-color: white;
+            padding: 40px;
+            text-align: center;
+            border-bottom: 5px solid #d90429;
+        }
+
+        /* ၃။ Content Section (Flexbox သုံးထားသည်) */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            width: 300px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        button {
+            background-color: #d90429;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">ပင်မ</a>
+        <a href="blog.html">Blog</a>
+        <a href="gallery.html">ဓာတ်ပုံများ</a>
+        <a href="guide.html">လမ်းညွှန်</a>
+    </nav>
+
+    <header>
+        <h1>Life in Japan 🇯🇵</h1>
+        <p>ဂျပန်နိုင်ငံရဲ့ အတွေ့အကြုံနဲ့ ဗဟုသုတများ စုစည်းမှု</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h3>နောက်ဆုံးရဆောင်းပါး</h3>
+            <p>ဖူဂျီတောင်ခြေက အလှတရားများအကြောင်း ဖတ်ရှုရန်...</p>
+            <button onclick="goToBlog()">ဖတ်ရန်</button>
+        </div>
+
+        <div class="card">
+            <h3>ဗီဇာလမ်းညွှန်</h3>
+            <p>ဂျပန်အလုပ်ဗီဇာ ဘယ်လိုလျှောက်ရမလဲ?</p>
+            <a href="guide.html"><button>ကြည့်ရန်</button></a>
+        </div>
+    </div>
+
+    <script>
+        function goToBlog() {
+            window.location.href = "blog.html";
+        }
+        
+        // Console မှာ စာသားပြခြင်း (စစ်ဆေးရန်)
+        console.log("Welcome to Life in Japan Website!");
+    </script>
+
+</body>
+</html>
