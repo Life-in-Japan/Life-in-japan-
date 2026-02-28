@@ -3,104 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life in Japan - Home</title>
+    <title>My Japan Life - Home</title>
     <style>
-        /* အခြေခံပုံစံ သတ်မှတ်ခြင်း */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            background-color: #f4f4f4;
+            line-height: 1.6;
             color: #333;
         }
 
-        /* ၁။ Navigation Menu ပုံစံ */
+        /* Navigation Menu */
         nav {
-            background-color: #d90429; /* ဂျပန်အလံအရောင်နဲ့ ဆင်တူတဲ့ အနီရောင် */
-            padding: 15px;
+            background: #2c3e50;
+            padding: 1rem;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
+
         nav a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
+            margin: 0 15px;
             font-weight: bold;
         }
-        nav a:hover {
-            background-color: #ef233c;
-            border-radius: 5px;
-        }
 
-        /* ၂။ Header အပိုင်း */
-        header {
-            background-color: white;
-            padding: 40px;
-            text-align: center;
-            border-bottom: 5px solid #d90429;
-        }
-
-        /* ၃။ Content Section (Flexbox သုံးထားသည်) */
-        .container {
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('fuji.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh; /* Screen အမြင့်ရဲ့ ၈၀ ရာခိုင်နှုန်း */
             display: flex;
-            flex-wrap: wrap;
-            padding: 20px;
+            flex-direction: column;
             justify-content: center;
-            gap: 20px;
-        }
-
-        .card {
-            background: white;
-            width: 300px;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        button {
-            background-color: #d90429;
+            align-items: center;
             color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            border-radius: 5px;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            flex-wrap: wrap;
+            background-color: #fff;
+        }
+
+        .feature-box {
+            flex: 1;
+            min-width: 250px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="index.html">ပင်မ</a>
+        <a href="index.html">Home</a>
         <a href="blog.html">Blog</a>
-        <a href="gallery.html">ဓာတ်ပုံများ</a>
-        <a href="guide.html">လမ်းညွှန်</a>
+        <a href="gallery.html">Gallery</a>
     </nav>
 
-    <header>
-        <h1>Life in Japan 🇯🇵</h1>
-        <p>ဂျပန်နိုင်ငံရဲ့ အတွေ့အကြုံနဲ့ ဗဟုသုတများ စုစည်းမှု</p>
+    <header class="hero">
+        <h1>ကျွန်တော့်ရဲ့ ဂျပန်ဘဝ နေ့ရက်များမှ ကြိုဆိုပါတယ်။</h1>
+        <p>ဂျပန်မှာ နေထိုင်ရင်း ကြုံတွေ့ရတဲ့ အခက်အခဲတွေ၊ ပျော်ရွှင်စရာတွေနဲ့ သိထားသင့်တဲ့ ဗဟုသုတတွေကို စုစည်းဖော်ပြပေးမယ့် နေရာလေးတစ်ခုပါ။</p>
+        <a href="blog.html" class="cta-button">ဆောင်းပါးများ ဖတ်ရှုရန်</a>
     </header>
 
-    <div class="container">
-        <div class="card">
-            <h3>နောက်ဆုံးရဆောင်းပါး</h3>
-            <p>ဖူဂျီတောင်ခြေက အလှတရားများအကြောင်း ဖတ်ရှုရန်...</p>
-            <button onclick="goToBlog()">ဖတ်ရန်</button>
+    <section class="features">
+        <div class="feature-box">
+            <h3>📖 Blog</h3>
+            <p>ဂျပန်နိုင်ငံအကြောင်း စိတ်ဝင်စားဖွယ် ဆောင်းပါးများ</p>
         </div>
-
-        <div class="card">
-            <h3>ဗီဇာလမ်းညွှန်</h3>
-            <p>ဂျပန်အလုပ်ဗီဇာ ဘယ်လိုလျှောက်ရမလဲ?</p>
-            <a href="guide.html"><button>ကြည့်ရန်</button></a>
+        <div class="feature-box">
+            <h3>📸 Gallery</h3>
+            <p>လှပသော ဂျပန်နိုင်ငံ၏ ပုံရိပ်များ</p>
         </div>
-    </div>
+        <div class="feature-box">
+            <h3>🌸 Culture</h3>
+            <p>ဂျပန်ယဉ်ကျေးမှုနှင့် နေထိုင်မှုပုံစံများ</p>
+        </div>
+    </section>
 
-    <script>
-        function goToBlog() {
-            window.location.href = "blog.html";
-        }
-        
-        // Console မှာ စာသားပြခြင်း (စစ်ဆေးရန်)
-        console.log("Welcome to Life in Japan Website!");
-    </script>
+    <footer style="background: #333; color: white; text-align: center; padding: 20px;">
+        <p>&copy; 2024 My Japan Life Blog</p>
+    </footer>
 
 </body>
 </html>
