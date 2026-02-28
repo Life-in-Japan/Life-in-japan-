@@ -3,40 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Life in Japan</title>
+    <title>Photo Gallery - My Japan Life</title>
     <style>
-        body { font-family: Arial; margin: 0; background-color: #f4f4f4; }
-        nav { background-color: #d90429; padding: 15px; text-align: center; }
-        nav a { color: white; text-decoration: none; padding: 10px 20px; font-weight: bold; }
-        
-        .gallery-container {
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .nav-menu {
+            background: #333;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .nav-menu a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+
+        /* CSS Grid စနစ် */
+        .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(2, 1fr); /* ဖုန်းမှာ ၂ တန်း */
             gap: 15px;
             padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
-        .gallery-item img {
+
+        .gallery-grid img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            height: 250px; /* ပုံတွေအားလုံး အရပ်အမြင့် တူအောင် */
+            object-fit: cover; /* ပုံမရှုံ့အောင် ထိန်းပေးခြင်း */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease; /* Mouse တင်ရင် တုန်ခါမှုပေးဖို့ */
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.03); /* Mouse တင်ရင် နည်းနည်းကြီးလာမယ် */
+        }
+
+        /* ကွန်ပျူတာ Screen အတွက် ၃ တန်း ပြောင်းမယ် */
+        @media (min-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">ပင်မ</a>
+
+    <nav class="nav-menu">
+        <a href="index.html">Home</a>
         <a href="blog.html">Blog</a>
-        <a href="gallery.html">ဓာတ်ပုံများ</a>
-        <a href="guide.html">လမ်းညွှန်</a>
+        <a href="gallery.html">Gallery</a>
     </nav>
-    <h1 style="text-align:center;">ဂျပန်နိုင်ငံ မြင်ကွင်းများ</h1>
-    <div class="gallery-container">
-        <div class="gallery-item"><img src="fuji.jpg.jpeg" alt="Fuji"></div>
-        <div class="gallery-item"><img src="tokyo.jpg.jpeg" alt="Tokyo"></div>
-        <div class="gallery-item"><img src="osaka.jpg.jpeg
-" alt="Osaka"></div>
-    </div>
+
+    <h1>ဂျပန်နိုင်ငံမှ အမှတ်တရပုံရိပ်များ</h1>
+
+    <div class="gallery-grid">
+        <img src="fuji.jpg" alt="Mount Fuji">
+        <img src="Tokyo.jpg.jpeg" alt="Tokyo City">
+        <img src="osaka.jpg.jpeg" alt="Osaka City">
+        </div>
+
+    <footer style="text-align: center; padding: 20px; color: #7f8c8d;">
+        &copy; 2024 My Japan Life
+    </footer>
+
 </body>
 </html>
